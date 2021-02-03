@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
 import React from "react";
 import { ITodo } from "@src/interfaces";
 import { useObserver } from "mobx-react-lite";
-import { Button, Checkbox, Input, List, Row, Space, Typography } from "antd";
+import { Button, Checkbox, List } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import {
   TodoItemVMProvider,
@@ -14,17 +13,6 @@ interface IProps {
   todo: ITodo;
 }
 
-const Root = styled.div`
-  display: flex;
-  min-width: 600px;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #282c34;
-  margin: 10px;
-`;
 
 const TodoItem: React.FC<IProps> = ({ todo }) => {
   const { todoStore } = useStores();
