@@ -6,7 +6,7 @@ import { Button, Checkbox, Input, List, Row, Space, Typography } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import {
   TodoItemVMProvider,
-  useTodoItemVM,
+  useTodoItemVM
 } from "@src/screens/RootScreen/TodoItem/TodoItemVM";
 import { useStores } from "@stores";
 
@@ -45,7 +45,7 @@ const TodoItemImpl: React.FC = () => {
           onClick={() => (vm.editable = !vm.editable)}
         />,
         <div style={{ width: 8 }} />,
-        <Button icon={<DeleteOutlined />} onClick={vm.remove} />,
+        <Button icon={<DeleteOutlined />} onClick={vm.remove} />
       ]}
     >
       <List.Item.Meta
